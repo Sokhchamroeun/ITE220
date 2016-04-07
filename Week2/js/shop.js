@@ -30,15 +30,18 @@ var discountTotalPriceElement = document.getElementById("total-price");
 discountTotalPriceElement.textContent = actualTotalPrice - actualTotalPrice * decimalDiscount + "   ";
 
 var greeting = "";
-var hour = new Date().getHours;
+var hour = new Date().getHours();
 var greetingText = document.getElementById("greeting-text");
-if (hour < 18 ) {
-	greeting = "Good Evening";
+if (hour > 0 && hour <= 12) {
+	greeting = "Good Morning";
 }
-	else if (hour > 12)	{
+	else if (hour > 12 && hour <=17)	{
 		greeting = "Good Afternoon";
 	}
-	else {
+	else{
 		greeting = "Good Evening";
 	}
 greetingText.textContent = greeting;
+
+
+
