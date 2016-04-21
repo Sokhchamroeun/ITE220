@@ -10,7 +10,7 @@ var task1 = {
 	resize: function(){
 		window.addEventListener("resize", this.render);
 	},
-	devinfo: function(){
+	devInfo: function(){
 		var btnDev = document.getElementById("dev-info");
 		btnDev.addEventListener("click", function(){
 		var devInfo = "<br>" + "Sokhchamroeun" + "<br>" + "Faculty of Science and Technology" + "<br>" + "<a href='https://github.com/Sokhchamroeun'>https://github.com/Sokhchamroeun</a>";
@@ -22,5 +22,5 @@ var task1 = {
 }
 task1.render();
 task1.resize();
-task1.devinfo();
+task1.devInfo();
 })(); // end on load events

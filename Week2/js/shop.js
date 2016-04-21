@@ -27,7 +27,7 @@ var decimalDiscount = 0.25;
 var percentageDiscount = document.getElementById("percentDiscount");
 percentageDiscount.textContent = decimalDiscount * 100 + "% off";
 var discountTotalPriceElement = document.getElementById("total-price");
-discountTotalPriceElement.textContent = actualTotalPrice - actualTotalPrice * decimalDiscount + "   ";
+discountTotalPriceElement.textContent = actualTotalPrice - (actualTotalPrice * decimalDiscount) + "   ";
 
 var greeting = "";
 var hour = new Date().getHours();

@@ -1,6 +1,7 @@
 var shop = {
 	customerName: "Cham",
 	totalPrice:0,
+	percentDiscount:0.25,
 	products: [
 		"Brooklyn T-Shirt White",
 		"Brooklyn T-Shirt Black",
@@ -24,18 +25,28 @@ var shop = {
 		productsElement.innerHTML = productsText;
 	},
 	calculateTotalPrice: function(){
-		return (this.prices[0] + this.prices[1] + this.prices[2] + this.prices[3]) * 0.25;
+		return ((this.prices[0] + this.prices[1] + this.prices[2] + this.prices[3]) * 0.25);
 	},
 	displayTotalPrice: function(){
 		this.totalPrice = this.calculateTotalPrice();
 		var totalPriceElement = document.getElementById("total-price");
 		totalPriceElement.textContent = this.totalPrice;
 	},
+	calculatePercentDiscount: function(){
+		return (this.percentDiscount * 100);
+	},
+	displayPercentDiscount: function(){
+		this.percentDiscount = this.calculatePercentDiscount();
+		var percentDiscountElement = document.getElementById("percentDiscount");
+		percentDiscountElement.textContent = this.percentDiscount + " %";
+
+	}
+	,
 }
 shop.displayCustomerName();
 shop.displayProductList();
-shop.calculateTotalPrice();
 shop.displayTotalPrice();
+shop.displayPercentDiscount();
 // var totalPrice = 0;
 // var customerElement = document.getElementById("customer-name");
 // customerElement.textContent = customerName;
@@ -67,15 +78,15 @@ shop.displayTotalPrice();
 // discountTotalPriceElement.textContent = actualTotalPrice - actualTotalPrice * decimalDiscount + "   ";
 
 // var greeting = "";
-// var hour = new Date().getHours;
+// var hour = new Date().getHours();
 // var greetingText = document.getElementById("greeting-text");
-// if (hour < 18 ) {
-// 	greeting = "Good Evening";
+// if (hour > 0 && hour <= 12) {
+// 	greeting = "Good Morning";
 // }
-// 	else if (hour > 12)	{
+// 	else if (hour > 12 && hour <=17)	{
 // 		greeting = "Good Afternoon";
 // 	}
-// 	else {
+// 	else{
 // 		greeting = "Good Evening";
 // 	}
 // greetingText.textContent = greeting;
