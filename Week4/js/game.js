@@ -1,6 +1,6 @@
 (function(){
 	var game = {
-		randonNumber:, // we'll random this number later
+		randonNumber: Math.floor((Math.random()*100) + 1), // we'll random this number later
 		init: function(){
 			this.bindEvent();
 		},
